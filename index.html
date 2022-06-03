@@ -74,22 +74,12 @@
             margin: 20px;
         }
     </style>
-     
-    
-    
-    <iframe id="panda-2bb38289-a9ac-406c-a857-e389deedc0a0" src="https://player-vz-180e167f-aa1.tv.pandavideo.com.br/embed/?v=2bb38289-a9ac-406c-a857-e389deedc0a0" style="border:none;position:absolute;top:0;left:0;" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="720" height="360"></iframe>
-    
-    
-    
-    
-    
-    
 </head>
 
 <body>
     <main>
         <div style="display: flex;justify-content: center;" id="container-video">
-            <script type="text/javascript" id="scr_62700158c3436c0009118ff4">
+            <script type="text/javascript" id="vid_629a05ee240530000ad43c84">
             </script>
         </div>
         <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 40px;">
@@ -119,23 +109,34 @@
 
 
 
-   <!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '368104191854259');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=368104191854259&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '368104191854259');
+        fbq('track', 'PageView');
+    </script>
+
+
+
+
+
+<iframe id="panda-2bb38289-a9ac-406c-a857-e389deedc0a0" 
+src="https://player-vz-180e167f-aa1.tv.pandavideo.com.br/embed/?v=2bb38289-a9ac-406c-a857-e389deedc0a0" 
+style="border:none;position:absolute;top:5vh;left:25vw;width:100%;max-width: 720px;" 
+allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="1920" 
+height="400"></iframe>
+
+
 
 
 
@@ -150,11 +151,10 @@
             tituloPagina: "Foi revelado",
             corFundoPrimeiroBotao: "orange",
             textoPrimeiroBotao: "QUERO COMPRAR AGORA",
-            linkVideo: "https://player-vz-180e167f-aa1.tv.pandavideo.com.br/embed/?v=2bb38289-a9ac-406c-a857-e389deedc0a0",
             linkTermosDeUso: "https://www.lucrandotanto.site/termos-uso-bjm",
             linkPoliticaDePrivacidade: "https://www.lucrandotanto.site/politicas-privacidade-bjm",
-            linkBotao: "https://pay.kiwify.com.br/lv5FcER?afid=GPjWCYUD",
-            delayBotao:1020
+            linkBotao: "https://go.abmex.com.br/c/0KRBBRctrs/yIPMVNjWqNrO4EU",
+            delayBotao: 5
         };
 
 
@@ -167,13 +167,6 @@
 
             $("#termos").attr("href", pageAttrs.linkTermosDeUso)
             $("#politica").attr("href", pageAttrs.linkTermosDeUso)
-
-            var a = document.createElement("script");
-            a.id = "scr_" + pageAttrs.linkVideo.split("/")[5]
-            document.querySelector('#container-video').appendChild(a)
-
-            var s = document.createElement("script");
-            s.src = pageAttrs.linkVideo, s.async = !0, document.head.appendChild(s);
 
             setTimeout(() => {
                 $("#botao-venda").show();

@@ -94,54 +94,37 @@
 
 <body>
     <main>
+
         <div style="display: flex;justify-content: center;" id="container-video">
             <script type="text/javascript" id="scr_62700158c3436c0009118ff4">
             </script>
-        </div>
-        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 40px;">
-            <button id="botao-venda" onclick="openLink()" class="btn-first" style="display: none;"></button>
+
         </div>
 
 
-        <div style="position:absolute;margin-top:40px;bottom:0px;left:0">
-            <div style="margin-top: 50px;text-align: center;">
-                <a id="termos" href="#" target="_blank">Termos de uso</a>
-                <a id="politica" href="#" target="_blank">Política de privacidade</a>
-            </div>
-            <p style="text-align: center;"><strong><span style="color: #ffffff;">Este
-                        site
-                        não é afiliado ao
-                        Facebook ou
-                        a
-                        qualquer entidade do
-                        Facebook.</span></strong> Depois que você sair do Facebook, a responsabilidade não é deles e sim
-                do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e
-                usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais
-                fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato
-                e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas
-                as mensagens por ordem de chegada.</p>
-        </div>
+
     </main>
 
 
-
-   <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '368104191854259');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=368104191854259&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '368104191854259');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=368104191854259&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <div id="vid_629a05ee240530000ad43c84" style="position:relative;width:100%;padding: 56.25% 0 0;"><img
             id="thumb_629a05ee240530000ad43c84"
@@ -174,17 +157,43 @@ src="https://www.facebook.com/tr?id=368104191854259&ev=PageView&noscript=1"
 
         window.onload = function () {
             document.title = pageAttrs.tituloPagina;
-            $(".btn-first").css("background-color", pageAttrs.corFundoPrimeiroBotao);
-            $(".btn-first").html(pageAttrs.textoPrimeiroBotao);
-            $(".btn-second").css("background-color", pageAttrs.corFundoSegundoBotao);
-            $(".btn-second").html(pageAttrs.textoSegundoBotao);
 
             $("#termos").attr("href", pageAttrs.linkTermosDeUso)
             $("#politica").attr("href", pageAttrs.linkTermosDeUso)
 
-            setTimeout(() => {
-                $("#botao-venda").show();
-            }, pageAttrs.delayBotao * 1000)
+            $(document).ready(function () {
+                $("#smartplayer").after(`
+                <div style="margin-top:10vh;position:absolute;top:60vh;display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 40px;">
+                    <button id="botao-venda" onclick="openLink()" class="btn-first" style="display: none;"></button>
+                </div>
+    `)
+                $(".btn-first").css("background-color", pageAttrs.corFundoPrimeiroBotao);
+                $(".btn-first").html(pageAttrs.textoPrimeiroBotao);
+                $(".btn-first").after(`
+                <div style="position:relative;top:10vh;bottom:0px;left:0">
+            <div style="margin-top: 50px;text-align: center;">
+                <a id="termos" href="#" target="_blank">Termos de uso</a>
+                <a id="politica" href="#" target="_blank">Política de privacidade</a>
+            </div>
+            <p style="text-align: center;"><strong><span style="color: #ffffff;">Este
+                        site
+                        não é afiliado ao
+                        Facebook ou
+                        a
+                        qualquer entidade do
+                        Facebook.</span></strong> Depois que você sair do Facebook, a responsabilidade não é deles e sim
+                do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do produto e
+                usamos resultados reais. Nós não vendemos o seu e-mail ou qualquer informação para terceiros. Jamais
+                fazemos nenhum tipo de spam. Se você tiver alguma dúvida, sinta-se à vontade para usar o link de contato
+                e falar conosco em horário comercial de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas
+                as mensagens por ordem de chegada.</p>
+        </div>
+        `)
+                setTimeout(() => {
+                    $("#botao-venda").show();
+                }, pageAttrs.delayBotao * 1000)
+            })
+
         }
         function openLink() {
             window.open(pageAttrs.linkBotao)

@@ -161,16 +161,18 @@
             $("#termos").attr("href", pageAttrs.linkTermosDeUso)
             $("#politica").attr("href", pageAttrs.linkTermosDeUso)
 
+
+
             $(document).ready(function () {
                 $("#smartplayer").after(`
-                <div style="margin-top:10vh;position:absolute;top:60vh;display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 40px;">
+                <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 40px;">
                     <button id="botao-venda" onclick="openLink()" class="btn-first" style="display: none;"></button>
                 </div>
     `)
                 $(".btn-first").css("background-color", pageAttrs.corFundoPrimeiroBotao);
                 $(".btn-first").html(pageAttrs.textoPrimeiroBotao);
                 $(".btn-first").after(`
-                <div style="position:relative;top:10vh;bottom:0px;left:0">
+                <div style="position:relative;margin-top:40px;bottom:0px;left:0">
             <div style="margin-top: 50px;text-align: center;">
                 <a id="termos" href="#" target="_blank">Termos de uso</a>
                 <a id="politica" href="#" target="_blank">Política de privacidade</a>
